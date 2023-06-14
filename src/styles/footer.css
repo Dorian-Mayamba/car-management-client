@@ -1,0 +1,20 @@
+footer{
+    background-color: aqua;
+    text-align: center;
+    padding: 2vh 0;
+    font-size:2rem;
+}
+
+footer a{
+    text-decoration: none;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+footer a:active{
+    text-decoration: none;
+    color: #ff0000;
+}
+

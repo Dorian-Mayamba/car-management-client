@@ -1,0 +1,62 @@
+.auth-box{
+    min-height: 100vh;
+    background: url('../assets/images/car-landscape-lamborghini-gallardo.jpg') no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.auth-box > form{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background: rgba(241, 241, 249,0.2);
+    padding: 2.5rem 4.5rem;
+    border-radius: 20px;
+}
+
+.auth-box > form > .form-entry-group{
+    margin-bottom:2rem;
+}
+
+.auth-box > form > .form-entry-group > input{
+    width: 28vw;
+    padding: 1.1rem;
+    border: none;
+    border-radius:15vw;
+    font-size:1.2rem;
+    outline: none;
+}
+
+.auth-box > form > .form-entry-group > input[type="submit"]{
+    font-weight: bold;
+    background-color: var(--link-bg);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.auth-box > form > .form-entry-group > input[type="submit"]:hover{
+    background-color: unset;
+    color: field;
+    outline: solid var(--link-bg);
+}
+
+.auth-box > form > .links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:1.16rem;
+}
+
+.auth-box > form > .links > a{
+    text-decoration: none;
+    color:rgb(200, 48, 6)
+}
+
+.auth-box > form > .links > a:hover{
+    text-decoration: underline;
+}
+
+::placeholder{
+    font-weight: bold;
+}

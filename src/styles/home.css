@@ -1,0 +1,53 @@
+.box{
+    min-height: 100vh;
+    background-color: rgb(247, 132, 132);
+}
+
+.box > .instructions{
+    text-align: center;
+}
+
+.box > .instructions > h1{
+    color: var(--text-color);
+    padding-top:12px;
+}
+
+.box > .instructions > p{
+    font-size: 30px;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.box > .images{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 4.4rem;
+}
+
+.box > .images > img{
+    width: 30%;
+    height: 30vh;
+}
+
+.box > .link{
+    text-align: center;
+}
+
+.box > .link > a{
+    font-size: 3.0rem;
+    text-decoration: none;
+    color: #f0f1f2;
+    background-color: rgb(14, 186, 189);
+    padding: 1.3rem;
+    border-radius: 2.3rem;
+    transition: all 0.3s;
+}
+
+.box > .link > a:hover{
+    filter: brightness(80%);
+}
+
+.box > .link > a:active{
+    filter: brightness(100%);
+}

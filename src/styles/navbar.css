@@ -1,0 +1,39 @@
+:root{
+    --padding-var:1.2rem;
+    --text-color:#e9f1f5;
+    --link-bg:#5dc7fc;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header > .navbar-container > .nav{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(111, 111,111);
+    padding: var(--padding-var);
+    margin:0px 0px 1.4rem 0px;
+    font-size:1.7rem;
+}
+
+header > .navbar-container > .nav li a{
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: var(--padding-var) 20px;
+    border-radius: 1.2em;
+    transition: all 0.5s;
+}
+
+header > .navbar-container > .nav li a:hover{
+    background-color: var(--link-bg);
+}
+
+header > .navbar-container > .nav li .active{
+    background-color: var(--link-bg);
+}
+
