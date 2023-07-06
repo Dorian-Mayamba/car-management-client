@@ -2,6 +2,7 @@
     --padding-var:1.2rem;
     --text-color:#e9f1f5;
     --link-bg:#5dc7fc;
+    --nav-bg:rgb(111,111,111);
 }
 
 *{
@@ -14,7 +15,7 @@ header > .navbar-container > .nav{
     list-style: none;
     display: flex;
     justify-content: space-around;
-    background-color: rgb(111, 111,111);
+    background-color: var(--nav-bg);
     padding: var(--padding-var);
     margin:0px 0px 1.4rem 0px;
     font-size:1.7rem;
@@ -35,5 +36,29 @@ header > .navbar-container > .nav li a:hover{
 
 header > .navbar-container > .nav li .active{
     background-color: var(--link-bg);
+}
+
+header > .navbar-container > .nav > li > .dropdown-menu{
+    display: none;
+    background-color: var(--nav-bg);
+    opacity: 0.75;
+}
+
+header > .navbar-container > .nav > li > .dropdown-menu > li{
+    margin: 2.3rem 20px;
+}
+
+header > .navbar-container > .nav > li > .dropdown-menu > li > a{
+    font-weight: bold;
+}
+
+header > .navbar-container > .nav > li > .dropdown-active{
+    display: block;
+}
+
+.arrow{
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    
 }
 

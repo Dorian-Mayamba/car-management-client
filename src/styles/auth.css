@@ -10,7 +10,7 @@
     top:50%;
     left:50%;
     transform: translate(-50%, -50%);
-    background: rgba(241, 241, 249,0.2);
+    background: rgba(203, 203, 232, 0.2);
     padding: 2.5rem 4.5rem;
     border-radius: 20px;
 }
@@ -45,12 +45,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size:1.16rem;
+    font-size:1.028rem;
 }
 
 .auth-box > form > .links > a{
     text-decoration: none;
-    color:rgb(200, 48, 6)
+    color:rgb(200, 48, 6);
+    font-weight: bold;
 }
 
 .auth-box > form > .links > a:hover{
@@ -59,4 +60,5 @@
 
 ::placeholder{
     font-weight: bold;
+    color: black;
 }
