@@ -1,10 +1,11 @@
 import { useEffect } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink,useNavigate } from "react-router-dom";
 import '../styles/navbar.css';
-import { authContextType, isAuthContextType, useAuth, useIsAuth } from "../contexts/contexts";
+import { authContextType, isAuthContextType, useAuth, useIsAuth} from "../contexts/contexts";
 export default function Navbar() {
     const { isAuthenticated, setAuthenticated } = useIsAuth() as isAuthContextType;
     const { currentUser, setCurrentUser } = useAuth() as authContextType;
+    const navigate = useNavigate();
     const renderContent = () => {
         if (isAuthenticated) {
             return (
@@ -17,9 +18,6 @@ export default function Navbar() {
                         <ul style={{ position: 'absolute' }} className="dropdown-menu">
                             <li>
                                 <Link to='#' onClick={HandleLogout}>Logout</Link>
-                            </li>
-                            <li>
-                                <Link to='#' onClick={verify}>Verify token</Link>
                             </li>
                             {currentUser?.isAdmin() ?
                                 <>
@@ -62,28 +60,13 @@ export default function Navbar() {
                         if (data?.message === 'logout success') {
                             setAuthenticated(false);
                             setCurrentUser(null);
+                            navigate('/', {replace:true});
                         }
                     })
             })
             .catch(err=>{
                 console.log(err);
             })
-    }
-
-    const verify = async () => {
-        try {
-            const response = await fetch('api/auth/verify', {
-                method: 'POST',
-                headers: {
-                    "Content-Type": "application/json"
-                }
-            })
-            const data = await response.json();
-
-            console.log(data);
-        } catch (err) {
-            console.log(err);
-        }
     }
 
     useEffect(() => {

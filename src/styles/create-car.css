@@ -1,0 +1,50 @@
+:root{
+    --submit-bg:rgb(179, 179, 241);
+    --light:rgb(255,255,255);
+    --placeholder-bg:rgb(111, 111, 111);
+}
+
+::placeholder{
+    color: var(--placeholder-bg);
+    font-weight: bold;
+}
+
+.add-car-form-box{
+    min-height: 100vh;
+    background:url('../assets/images/car-landscape-admin.jpg') no-repeat;
+    background-size:100% 100%;
+    display: grid;
+    align-content: center;
+    place-items: center;
+}
+
+.add-car-form-box > form{
+    background-color: rgba(186, 209, 229,0.4);
+    padding: 2.6rem;
+    border-radius: 20px;
+}
+
+.add-car-form-box > form > .form-car-group{
+    margin-bottom: 2.1rem;
+}
+
+.add-car-form-box > form > .form-car-group > input{
+    width: 25vw;
+    padding: .8rem;
+    outline: none;
+    border: none;
+    border-radius:20vw;
+    font-size: 1.3em;
+}
+
+.add-car-form-box > form > .form-car-group > input[type="submit"]{
+    background-color: var(--submit-bg);
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.add-car-form-box > form > .form-car-group > input[type="submit"]:hover{
+    background:none;
+    outline: solid 2px var(--submit-bg);
+    color: var(--light);
+}
